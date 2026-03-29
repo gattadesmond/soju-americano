@@ -5,7 +5,7 @@ import clsx from "clsx";
 import { Providers } from "./providers";
 
 import { siteConfig } from "@/config/site";
-import { fontSans } from "@/config/fonts";
+import { fontMono } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
 
 export const metadata: Metadata = {
@@ -36,17 +36,17 @@ export default function RootLayout({
       <head />
       <body
         className={clsx(
-          "min-h-screen text-foreground bg-background font-sans antialiased",
-          fontSans.variable,
+          "min-h-screen text-foreground bg-background font-sans antialiased selection:bg-accent/15 selection:text-foreground",
+          fontMono.variable,
         )}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
-          <div className="relative flex flex-col h-screen">
+          <div className="relative flex min-h-screen flex-col">
             <Navbar />
-            <main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
+            <main className="mx-auto w-full max-w-[767px] flex-1 px-5 pt-14 pb-16 sm:px-6">
               {children}
             </main>
-            <footer className="text-muted flex w-full items-center justify-center py-6 text-sm">
+            <footer className="text-muted mx-auto w-full max-w-[767px] px-5 py-8 text-center text-sm sm:px-6">
               <span>Soju — digital garden</span>
             </footer>
           </div>

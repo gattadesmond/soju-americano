@@ -24,15 +24,15 @@ export default async function VideosPage() {
   });
 
   return (
-    <section className="pb-20">
-      <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight text-balance">
+    <section>
+      <h1 className="scroll-m-20 text-[2rem] font-semibold leading-tight tracking-tight text-balance sm:text-[2.125rem]">
         Videos
       </h1>
-      <p className="text-muted mt-2">
+      <p className="text-muted mt-3 text-[15px] leading-relaxed">
         Danh sách video từ YouTube. Bấm vào để xem.
       </p>
 
-      <div className="mt-6">
+      <div className="mt-8">
         {videos.length > 0 ? (
           <VideosList videos={videos} />
         ) : (

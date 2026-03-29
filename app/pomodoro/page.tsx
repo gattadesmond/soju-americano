@@ -188,12 +188,12 @@ export default function PomodoroPage() {
   }, [isRunning, secondsLeft, mode]);
 
   return (
-    <section className="pb-20">
-      <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight text-balance">
+    <section>
+      <h1 className="scroll-m-20 text-[2rem] font-semibold leading-tight tracking-tight text-balance sm:text-[2.125rem]">
         Pomodoro
       </h1>
 
-      <div className="mt-6 flex flex-wrap gap-2">
+      <div className="mt-8 flex flex-wrap gap-2">
         {(Object.keys(MODE_CONFIG) as Mode[]).map((m) => (
           <Button
             key={m}

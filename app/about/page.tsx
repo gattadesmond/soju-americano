@@ -1,8 +1,10 @@
 export default function AboutPage() {
   return (
-    <section className="pb-20">
-      <div className="text-muted mb-0 text-lg font-semibold"># About me</div>
-      <div className="mt-3 space-y-3 pl-1 leading-relaxed">
+    <section>
+      <div className="text-muted mb-0 text-[15px] font-medium tracking-tight">
+        # About me
+      </div>
+      <div className="mt-4 space-y-3 pl-0.5 text-[15px] leading-[1.65] text-foreground/90">
         <p>Hi, I&apos;m Việt Hùng 👋.</p>
         <p>
           I design & code things on the web, and have great interest in updating
@@ -16,10 +18,10 @@ export default function AboutPage() {
 
       <hr className="border-separator my-8" />
 
-      <div className="text-muted mb-0 text-lg font-semibold">
+      <div className="text-muted mb-0 text-[15px] font-medium tracking-tight">
         # Work Experience
       </div>
-      <div className="mt-4 space-y-6 pl-1">
+      <div className="mt-5 space-y-8 pl-0.5">
         <div className="flex gap-3">
           <div className="mt-1.5 shrink-0">
             <div className="bg-warning size-2 rounded-full" />
@@ -126,8 +128,10 @@ export default function AboutPage() {
 
       <hr className="border-separator my-8" />
 
-      <div className="text-muted mb-0 text-lg font-semibold"># Skills</div>
-      <ol className="mt-3 list-inside list-decimal space-y-2 pl-1">
+      <div className="text-muted mb-0 text-[15px] font-medium tracking-tight">
+        # Skills
+      </div>
+      <ol className="text-muted mt-4 list-inside list-decimal space-y-2 pl-0.5 text-[15px] leading-relaxed">
         <li>🔍 Attention to detail</li>
         <li>🍎 Innovative problem-solving</li>
         <li>🐼 React, Vue, Gulp, Webpack</li>

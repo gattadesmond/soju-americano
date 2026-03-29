@@ -43,10 +43,10 @@ export function LinkListSection({
 }) {
   return (
     <div>
-      <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">
+      <h3 className="scroll-m-20 text-lg font-semibold tracking-tight">
         {title}
       </h3>
-      <ul className="mt-3 grid list-none grid-cols-1 gap-y-2 text-sm sm:grid-cols-2 sm:gap-x-6">
+      <ul className="mt-4 grid list-none grid-cols-1 gap-y-1.5 text-[14px] leading-snug">
         {items.map((item) => (
           <LinkListItem key={item.link} item={item} />
         ))}

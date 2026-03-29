@@ -25,11 +25,11 @@ export function VideosList({ videos }: { videos: VideoItem[] }) {
 
   return (
     <>
-      <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4">
+      <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3">
         {videos.map((video) => (
           <li key={video.id}>
             <Button
-              className="bg-surface shadow-surface h-auto w-full flex-col items-stretch gap-0 overflow-hidden border border-separator p-0 font-normal transition-colors hover:border-primary/40"
+              className="bg-surface shadow-surface h-auto w-full flex-col items-stretch gap-0 overflow-hidden rounded-xl border border-separator p-0 font-normal transition-colors hover:border-foreground/12"
               variant="tertiary"
               onPress={() => handleOpen(video.id)}
             >

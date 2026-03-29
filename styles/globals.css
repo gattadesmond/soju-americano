@@ -1,9 +1,62 @@
 @import "tailwindcss";
 @import "@heroui/styles";
+@import "@fontsource-variable/google-sans-flex";
 
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-	--font-sans: "font", sans-serif;
-	--font-mono: "monospace", monospace;
+	--font-sans: "Google Sans Flex Variable", ui-sans-serif, system-ui, sans-serif;
+	--font-mono: var(--font-mono-loaded), ui-monospace, "Cascadia Code", Menlo,
+		monospace;
+}
+
+/* Light, airy palette inspired by clean marketing sites (e.g. agora.xyz) */
+@layer base {
+	:root,
+	.light,
+	.default,
+	[data-theme="light"],
+	[data-theme="default"] {
+		--background: oklch(0.992 0.004 95);
+		--foreground: oklch(0.3 0.02 265);
+		--muted: oklch(0.5 0.014 265);
+		--border: oklch(0.9 0.006 265);
+		--separator: oklch(0.925 0.005 265);
+		--surface: oklch(0.999 0.002 95);
+		--surface-secondary: oklch(0.985 0.004 95);
+		--surface-tertiary: oklch(0.975 0.005 95);
+		--surface-shadow: 0 1px 0 0 oklch(0 0 0 / 0.04),
+			0 1px 2px -1px oklch(0 0 0 / 0.06);
+		--field-shadow: var(--surface-shadow);
+		--accent: oklch(0.48 0.1 200);
+		--accent-foreground: oklch(0.99 0 0);
+		--link: oklch(0.42 0.09 200);
+	}
+}
+
+/* Markdown body: comfortable line length inside narrow layout */
+@layer components {
+	.blog-prose {
+		@apply text-foreground leading-relaxed;
+		font-size: 0.9375rem;
+	}
+	.blog-prose h2 {
+		@apply mt-10 mb-3 text-xl font-semibold tracking-tight text-foreground;
+	}
+	.blog-prose h3 {
+		@apply mt-8 mb-2 text-lg font-semibold tracking-tight text-foreground;
+	}
+	.blog-prose p {
+		@apply my-4 text-foreground/88;
+	}
+	.blog-prose p:first-of-type {
+		@apply mt-0;
+	}
+	.blog-prose ul,
+	.blog-prose ol {
+		@apply my-4 pl-6 text-muted;
+	}
+	.blog-prose li {
+		@apply my-1.5;
+	}
 }

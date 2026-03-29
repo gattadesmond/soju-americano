@@ -16,21 +16,23 @@ export default function BlogPage() {
   const posts = getAllPosts();
 
   return (
-    <section className="pb-20">
-      <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight text-balance">
+    <section>
+      <h1 className="scroll-m-20 text-[2rem] font-semibold leading-tight tracking-tight text-balance sm:text-[2.125rem]">
         Blog
       </h1>
-      <p className="text-muted mt-2">Những bài viết tham khảo của tôi.</p>
+      <p className="text-muted mt-3 text-[15px] leading-relaxed">
+        Những bài viết tham khảo của tôi.
+      </p>
 
-      <ul className="mt-8 grid list-none grid-cols-1 gap-4">
+      <ul className="mt-10 grid list-none grid-cols-1 gap-3">
         {posts.map((post) => (
           <li key={post.slug}>
-            <div className="bg-surface shadow-surface border-separator hover:border-primary/30 rounded-xl border transition-colors">
+            <div className="bg-surface shadow-surface border-separator hover:border-foreground/12 rounded-2xl border transition-colors">
               <NextLink
-                className="block p-4 no-underline"
+                className="block p-5 no-underline sm:p-6"
                 href={`/blog/${encodeURIComponent(post.slug)}`}
               >
-                <h2 className="text-lg font-semibold text-foreground">
+                <h2 className="text-[17px] font-medium leading-snug text-foreground">
                   {post.title}
                 </h2>
                 {post.pubDate && (
@@ -42,7 +44,7 @@ export default function BlogPage() {
                   </time>
                 )}
                 {post.description && (
-                  <p className="text-muted mt-2 line-clamp-2 text-sm">
+                  <p className="text-muted mt-2 line-clamp-2 text-[14px] leading-relaxed">
                     {post.description}
                   </p>
                 )}

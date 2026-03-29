@@ -1,11 +1,8 @@
-import { Fira_Code as FontMono, Inter as FontSans } from "next/font/google";
+import { Fira_Code as FontMono } from "next/font/google";
 
-export const fontSans = FontSans({
-  subsets: ["latin"],
-  variable: "--font-sans",
-});
+/* Sans: Google Sans Flex via @fontsource-variable in globals.css */
 
 export const fontMono = FontMono({
   subsets: ["latin"],
-  variable: "--font-mono",
+  variable: "--font-mono-loaded",
 });

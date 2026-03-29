@@ -96,18 +96,18 @@ const listTools: LinkItem[] = [
 
 export default function Home() {
   return (
-    <section className="pb-20">
-      <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight text-balance">
+    <section>
+      <h1 className="scroll-m-20 text-[2rem] font-semibold leading-tight tracking-tight text-balance sm:text-[2.125rem]">
         Soju
       </h1>
 
-      <p className="text-muted mt-5 max-w-2xl leading-relaxed">
+      <p className="text-muted mt-4 max-w-prose text-[15px] leading-[1.65]">
         I design & code things on the web. This website is my digital garden,
         where I store the things I have been learning and love.
       </p>
 
-      <div className="bg-surface shadow-surface border-separator relative mt-8 -mx-2 overflow-hidden rounded-xl border sm:-mx-0">
-        <div className="bg-muted relative aspect-[800/533] w-full max-h-[min(50vh,533px)]">
+      <div className="bg-surface shadow-surface border-separator relative mt-10 overflow-hidden rounded-2xl border">
+        <div className="bg-muted relative aspect-[800/533] w-full max-h-[min(42vh,400px)]">
           {/* Optional: place bg-soju-1.png in /public (same as site cũ). */}
           {/* eslint-disable-next-line @next/next/no-img-element -- optional local asset */}
           <img
@@ -118,12 +118,12 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="mt-10 grid grid-cols-1 gap-10">
-        <div className="bg-surface shadow-surface border-separator rounded-xl border p-6">
-          <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">
+      <div className="mt-12 grid grid-cols-1 gap-12">
+        <div className="bg-surface shadow-surface border-separator rounded-2xl border p-6 sm:p-7">
+          <h3 className="scroll-m-20 text-lg font-semibold tracking-tight">
             Pomodoro
           </h3>
-          <ol className="mt-3 list-inside list-decimal space-y-2">
+          <ol className="text-muted mt-4 list-inside list-decimal space-y-2.5 text-[15px] leading-relaxed">
             <li>
               🐼 <strong className="font-semibold">1 pomodoro</strong> for read
               book

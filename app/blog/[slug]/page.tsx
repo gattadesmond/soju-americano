@@ -35,7 +35,7 @@ export default async function BlogPostPage({ params }: PageProps) {
       </NextLink>
 
       <header className="mb-8">
-        <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight text-balance">
+        <h1 className="scroll-m-20 text-[1.75rem] font-semibold leading-tight tracking-tight text-balance sm:text-[2rem]">
           {post.title}
         </h1>
         {post.pubDate && (
