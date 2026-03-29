@@ -4,7 +4,7 @@ export default function AboutPage() {
       <div className="text-muted mb-0 text-[15px] font-medium tracking-tight">
         # About me
       </div>
-      <div className="mt-4 space-y-3 pl-0.5 text-[15px] leading-[1.65] text-foreground/90">
+      <div className="text-foreground mt-4 space-y-3 pl-0.5 text-[15px] leading-[1.65]">
         <p>Hi, I&apos;m Việt Hùng 👋.</p>
         <p>
           I design & code things on the web, and have great interest in updating

@@ -12,7 +12,7 @@ export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="border-separator/80 bg-background/80 sticky top-0 z-40 w-full border-b backdrop-blur-md">
+    <nav className="bg-background border-separator sticky top-0 z-40 w-full border-b backdrop-blur-md">
       <header className="mx-auto flex h-14 max-w-[767px] items-center justify-between gap-4 px-5 sm:px-6">
         <div className="flex items-center gap-3">
           <NextLink className="text-foreground flex items-center gap-2.5" href="/">
@@ -72,7 +72,7 @@ export const Navbar = () => {
       </header>
 
       {isMenuOpen && (
-        <div className="border-separator/80 border-t md:hidden">
+        <div className="border-separator border-t md:hidden">
           <ul className="mx-auto flex max-w-[767px] flex-col gap-0.5 px-5 py-3 sm:px-6">
             {siteConfig.navMenuItems.map((item) => (
               <li key={item.href}>

@@ -10,9 +10,13 @@
 		monospace;
 }
 
-/* Light, airy palette inspired by clean marketing sites (e.g. agora.xyz) */
+/*
+ * Light palette override — must NOT use bare :root alone: that matches html even when
+ * html.dark and would overwrite HeroUI dark tokens. See:
+ * https://heroui.com/docs/react/getting-started/colors
+ */
 @layer base {
-	:root,
+	:root:not(.dark),
 	.light,
 	.default,
 	[data-theme="light"],
@@ -47,7 +51,7 @@
 		@apply mt-8 mb-2 text-lg font-semibold tracking-tight text-foreground;
 	}
 	.blog-prose p {
-		@apply my-4 text-foreground/88;
+		@apply text-foreground my-4;
 	}
 	.blog-prose p:first-of-type {
 		@apply mt-0;

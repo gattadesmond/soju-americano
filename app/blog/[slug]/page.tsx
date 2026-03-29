@@ -63,7 +63,7 @@ export default async function BlogPostPage({ params }: PageProps) {
           components={{
             a: ({ href, children }) => (
               <a
-                className="text-primary underline hover:no-underline"
+                className="text-link underline hover:no-underline"
                 href={href}
                 rel="noopener noreferrer"
                 target="_blank"

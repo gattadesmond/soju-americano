@@ -9,6 +9,8 @@ export type PostMeta = {
   title: string;
   description: string;
   pubDate: string;
+  /** Optional; defaults to site name in the blog index. */
+  author?: string;
   heroImage?: string;
   url?: string;
 };
@@ -39,6 +41,7 @@ export function getAllPosts(): PostMeta[] {
       title: (data.title as string) ?? slug,
       description: (data.description as string) ?? "",
       pubDate: typeof pubDate === "string" ? pubDate : String(pubDate),
+      author: data.author as string | undefined,
       heroImage: data.heroImage as string | undefined,
       url: data.url as string | undefined,
     });
@@ -70,6 +73,7 @@ export function getPostBySlug(slug: string): Post | null {
       title: (data.title as string) ?? slug,
       description: (data.description as string) ?? "",
       pubDate: typeof pubDate === "string" ? pubDate : String(pubDate),
+      author: data.author as string | undefined,
       heroImage: data.heroImage as string | undefined,
       url: data.url as string | undefined,
       content: content.trim(),

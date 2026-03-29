@@ -212,7 +212,7 @@ export default function PomodoroPage() {
         <div className="relative flex items-center justify-center">
           <svg className="size-64 -rotate-90" viewBox="0 0 100 100">
             <circle
-              className="text-muted/30"
+              className="text-separator"
               cx="50"
               cy="50"
               fill="none"
@@ -275,7 +275,7 @@ export default function PomodoroPage() {
             <p className="text-muted text-sm">{selectedTrack.artist}</p>
           </div>
           <AudioPlayer
-            className="border-separator rounded-lg border-0 bg-muted/50"
+            className="bg-surface-secondary border-separator rounded-lg border-0"
             layout="horizontal"
             showJumpControls={false}
             src={selectedTrack.src}
