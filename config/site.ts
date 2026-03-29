@@ -1,63 +1,22 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Next.js + HeroUI",
-  description: "Make beautiful websites regardless of your design experience.",
+  name: "Soju",
+  description:
+    "I design & code things on the web — digital garden, blog, videos, and tools.",
   navItems: [
-    {
-      label: "Home",
-      href: "/",
-    },
-    {
-      label: "Docs",
-      href: "/docs",
-    },
-    {
-      label: "Pricing",
-      href: "/pricing",
-    },
-    {
-      label: "Blog",
-      href: "/blog",
-    },
-    {
-      label: "About",
-      href: "/about",
-    },
+    { label: "Home", href: "/" },
+    { label: "About", href: "/about" },
+    { label: "Blog", href: "/blog" },
+    { label: "Videos", href: "/videos" },
+    { label: "Pomodoro", href: "/pomodoro" },
   ],
   navMenuItems: [
-    {
-      label: "Profile",
-      href: "/profile",
-    },
-    {
-      label: "Dashboard",
-      href: "/dashboard",
-    },
-    {
-      label: "Projects",
-      href: "/projects",
-    },
-    {
-      label: "Team",
-      href: "/team",
-    },
-    {
-      label: "Calendar",
-      href: "/calendar",
-    },
-    {
-      label: "Settings",
-      href: "/settings",
-    },
-    {
-      label: "Help & Feedback",
-      href: "/help-feedback",
-    },
-    {
-      label: "Logout",
-      href: "/logout",
-    },
+    { label: "Home", href: "/" },
+    { label: "About", href: "/about" },
+    { label: "Blog", href: "/blog" },
+    { label: "Videos", href: "/videos" },
+    { label: "Pomodoro", href: "/pomodoro" },
   ],
   links: {
     github: "https://github.com/heroui-inc/heroui",
